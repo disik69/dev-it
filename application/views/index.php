@@ -17,7 +17,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <header><h1>Catalog</h1></header>
         
         <div class="container">
-            
+            <div class="row">
+                <div class="col-xs-4">
+                    <select class="price form-control">
+                        <option value="0" selected="selected">All Prices</option>
+                    </select>
+                </div>
+                <div class="col-xs-4">
+                    <?php echo form_dropdown('', $sizes, '0', 'class="size form-control"') ?>
+                </div>
+                <div class="col-xs-4">
+                    <?php echo form_dropdown('', $colors, '0', 'class="color form-control"') ?>
+                </div>
+            </div>
+            <div class="row">
+                
+            </div>
         </div>
         
         <footer>Catalog&COPY; 2015</footer>

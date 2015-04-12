@@ -1,7 +1,7 @@
 <?php
 /**
 ********* CONTROLLERS *********
-* @property CI_DB_active_record $db
+* @property CI_DB $db
 * @property CI_DB_forge $dbforge
 * @property CI_Benchmark $benchmark
 * @property CI_Calendar $calendar
@@ -47,6 +47,13 @@
 * @property User_model $user_model
 */
 
-Class CI_Controller
+class CI_Controller
+{
+}
+
+/**
+ * @property CI_DB $db
+ */
+class CI_Model
 {
 }
