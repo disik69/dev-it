@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <header><h1>Catalog</h1></header>
         
         <div class="container">
-            <div class="row filter">
+            <div class="row filter-box">
                 <div class="col-xs-4">
                     <select class="price form-control">
                         <option value="0" selected="selected">All Prices</option>
@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
             
-            <div class="row content">
+            <div class="row content-box">
             </div>
             
             <div class="row page-box">

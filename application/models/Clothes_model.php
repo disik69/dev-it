@@ -39,22 +39,24 @@ class Clothes_model extends CI_Model
         $count = $this->db->get()->num_rows();
         //=========================================================
         
-        $this->db->from('clothes');
+        $this->db->select('clothes.name, clothes.photo, clothes.price, colors.name AS color')
+                 ->from('clothes')
+                 ->join('colors', 'colors.id = clothes.color_id');
         
         if ($price_from) {
-            $this->db->where('price >=', $price_from);
+            $this->db->where('clothes.price >=', $price_from);
         }
         
         if ($price_to) {
-            $this->db->where('price <=', $price_to);
+            $this->db->where('clothes.price <=', $price_to);
         }
         
         if ($size) {
-            $this->db->where('size_id =', $size);
+            $this->db->where('clothes.size_id =', $size);
         }
         
         if ($color) {
-            $this->db->where('color_id =', $color);
+            $this->db->where('clothes.color_id =', $color);
         }
         
         if (
